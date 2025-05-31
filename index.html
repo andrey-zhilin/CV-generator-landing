@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://sdmntpreastus.oaiusercontent.com/files/00000000-cd50-61f9-bbb4-d623ca92f5e0/raw"
+    type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-color: #a78bfa;
+      color: #1e1b4b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .background-lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      background-size: contain;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .content {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+      padding: 2rem;
+      border: 3px solid #1e1b4b;
+      max-width: 500px;
+      margin-top: 3rem;
+      box-shadow: 4px 4px 0px #1e1b4b;
+    }
+
+    .icon {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #ec4899;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #db2777;
+    }
+
+    .scroll-section {
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border: 3px solid #1e1b4b;
+      box-shadow: 4px 4px 0px #1e1b4b;
+      margin: 4rem auto;
+      padding: 2rem;
+      max-width: 900px;
+      gap: 2rem;
+    }
+
+    .scroll-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .scroll-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .scroll-text p {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .scroll-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .scroll-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      border: 2px solid #1e1b4b;
+    }
+
+    @media (max-width: 768px) {
+      .scroll-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .scroll-image img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-lines"></div>
+
+  <div class="content">
+    <h1>Effortless CV Customization for Top Professionals</h1>
+    <p>Customize your resume for <strong>any</strong> job in <strong>just minutes</strong>. No more endless edits.</p>
+    <div class="buttons">
+      <button class="btn" id="cta-button">Try It Free</button>
+    </div>
+  </div>
+
+  <div class="scroll-section">
+    <div class="scroll-text">
+      <h2>The Resume Struggle is Real</h2>
+      <p>In today’s competitive job market, highly qualified professionals are expected to tweak their CVs for every
+        application. This means hours spent adjusting content, formatting, and keywords—over and over again.</p>
+    </div>
+    <div class="scroll-image">
+      <img
+        src="https://sdmntpreastus.oaiusercontent.com/files/00000000-0d28-61f9-bb68-a85c908a1cd3/raw?se=2025-05-31T17%3A04%3A38Z&sp=r&sv=2024-08-04&sr=b&scid=abbc7e85-b070-5ac9-adef-1632a6e170c0&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-30T23%3A23%3A06Z&ske=2025-05-31T23%3A23%3A06Z&sks=b&skv=2024-08-04&sig=kmjI74HG8pSexN3lboqil1z2Jwibk0yxLG4lr0pxcp4%3D"
+        alt="Person holding a resume" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="scroll-section">
+    <div class="scroll-text">
+      <h2>Customize Your CV in Minutes</h2>
+      <p>With CV Generator, you can quickly adapt your resume for any job description.
+        Our smart tools help you highlight the right skills and experiences—so you spend less time editing and more time
+        applying.</p>
+    </div>
+    <div class="scroll-image">
+      <img
+        src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-43f0-61f7-9ee5-c04a6c74283f/raw?se=2025-05-31T17%3A04%3A38Z&sp=r&sv=2024-08-04&sr=b&scid=0d8b6d77-eb55-50a4-a1bc-ed761d2af33f&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-30T23%3A24%3A01Z&ske=2025-05-31T23%3A24%3A01Z&sks=b&skv=2024-08-04&sig=sbCVak4GVmRov2lneXTdrVKPEjnrKcRu11V79TKPilk%3D"
+        alt="Person in front of PC" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="scroll-section">
+    <div class="scroll-text">
+      <h2>How It Works</h2>
+      <p>1. Upload Your CV<br>
+        2. Paste the Job Description<br>
+        3. Let CV Generator Customize Your Resume<br>
+        4. Download & Apply</p>
+    </div>
+  </div>
+
+  <!-- Google Analytics 4 setup (blocked until consent) -->
+  <script type="text/plain" data-cookiecategory="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-cookiecategory="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <div id="cookie-banner"
+    style="position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 2px solid #1e1b4b; padding: 1rem; z-index: 9999; text-align: center;">
+    <p style="margin-bottom: 1rem;">We use cookies to analyze site usage. Please accept cookies for analytics.</p>
+    <button id="accept-cookies" class="btn">Accept</button>
+  </div>
+
+  <script>
+    function enableAnalyticsScripts() {
+      const scripts = document.querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]');
+      scripts.forEach(script => {
+        const newScript = document.createElement("script");
+        if (script.src) {
+          newScript.src = script.src;
+          newScript.async = true;
+        } else {
+          newScript.innerHTML = script.innerHTML;
+        }
+        document.head.appendChild(newScript);
+      });
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookie_consent", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+      enableAnalyticsScripts();
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("cookie_consent") === "true") {
+        enableAnalyticsScripts();
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("cta-button").addEventListener("click", function () {
+      console.log("CTA clicked");
+      if (typeof gtag === "function") {
+        gtag('event', 'try_it_free_click', {
+          'event_category': 'CTA',
+          'event_label': 'Main Button'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
