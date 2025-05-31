@@ -186,6 +186,45 @@
       margin-bottom: 1.5rem;
       color: #4b5563;
     }
+
+    /* Cookie banner styles */
+    #cookie-banner-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(30, 27, 75, 0.7);
+      z-index: 10001;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #cookie-banner {
+      background: white;
+      border-radius: 16px;
+      border: 3px solid #1e1b4b;
+      box-shadow: 0 8px 32px rgba(30, 27, 75, 0.2);
+      padding: 2rem 2.5rem;
+      max-width: 90vw;
+      text-align: center;
+    }
+
+    #cookie-banner h2 {
+      color: #1e1b4b;
+      margin-bottom: 1rem;
+    }
+
+    #cookie-banner p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      font-size: 1.1rem;
+    }
+
+    #accept-cookies {
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 
@@ -253,21 +292,32 @@
     gtag('config', 'G-ZLQXMSSN12');
   </script>
 
-  <div id="cookie-banner"
-    style="position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 2px solid #1e1b4b; padding: 1rem; z-index: 9999; text-align: center;">
-    <p style="margin-bottom: 1rem;">We use cookies to analyze site usage. Please accept cookies for analytics.</p>
-    <button id="accept-cookies" class="btn">Accept</button>
+  <div id="cookie-banner-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(30,27,75,0.7); z-index:10001; justify-content:center; align-items:center;">
+    <div id="cookie-banner" style="background: white; border-radius: 16px; border: 3px solid #1e1b4b; box-shadow: 0 8px 32px rgba(30,27,75,0.2); padding: 2rem 2.5rem; max-width: 90vw; text-align: center;">
+      <h2 style="color:#1e1b4b; margin-bottom:1rem;">We Value Your Privacy</h2>
+      <p style="margin-bottom: 1.5rem; color: #4b5563; font-size:1.1rem;">We use cookies to analyze site usage and improve your experience. Please accept cookies for analytics to continue using the site.</p>
+      <button id="accept-cookies" class="btn" style="font-size:1.1rem;">Accept</button>
+    </div>
   </div>
 
   <script>
+    function showCookieBanner() {
+      document.getElementById("cookie-banner-overlay").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+    function hideCookieBanner() {
+      document.getElementById("cookie-banner-overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
     document.getElementById("accept-cookies").addEventListener("click", function () {
       localStorage.setItem("cookie_consent", "true");
-      document.getElementById("cookie-banner").style.display = "none";
+      hideCookieBanner();
     });
-
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("cookie_consent") === "true") {
-        document.getElementById("cookie-banner").style.display = "none";
+        hideCookieBanner();
+      } else {
+        showCookieBanner();
       }
     });
   </script>
