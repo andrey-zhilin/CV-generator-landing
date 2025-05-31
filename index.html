@@ -292,10 +292,13 @@
     gtag('config', 'G-ZLQXMSSN12');
   </script>
 
-  <div id="cookie-banner-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(30,27,75,0.7); z-index:10001; justify-content:center; align-items:center;">
-    <div id="cookie-banner" style="background: white; border-radius: 16px; border: 3px solid #1e1b4b; box-shadow: 0 8px 32px rgba(30,27,75,0.2); padding: 2rem 2.5rem; max-width: 90vw; text-align: center;">
+  <div id="cookie-banner-overlay"
+    style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(30,27,75,0.7); z-index:10001; justify-content:center; align-items:center;">
+    <div id="cookie-banner"
+      style="background: white; border-radius: 16px; border: 3px solid #1e1b4b; box-shadow: 0 8px 32px rgba(30,27,75,0.2); padding: 2rem 2.5rem; max-width: 90vw; text-align: center;">
       <h2 style="color:#1e1b4b; margin-bottom:1rem;">We Value Your Privacy</h2>
-      <p style="margin-bottom: 1.5rem; color: #4b5563; font-size:1.1rem;">We use cookies to analyze site usage and improve your experience. Please accept cookies for analytics to continue using the site.</p>
+      <p style="margin-bottom: 1.5rem; color: #4b5563; font-size:1.1rem;">We use cookies to analyze site usage and
+        improve your experience. Please accept cookies for analytics to continue using the site.</p>
       <button id="accept-cookies" class="btn" style="font-size:1.1rem;">Accept</button>
     </div>
   </div>
@@ -324,6 +327,7 @@
 
   <script>
     document.getElementById("cta-button").addEventListener("click", function () {
+      console.log("CTA clicked");
       // Show under construction modal
       document.getElementById("under-construction-modal").style.display = "flex";
       // Google Analytics event
