@@ -144,6 +144,40 @@
         max-width: 90%;
       }
     }
+
+    /* Modal styles */
+    #under-construction-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(30, 27, 75, 0.5);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #under-construction-modal>div {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      border: 2px solid #1e1b4b;
+      box-shadow: 4px 4px 0px #1e1b4b;
+      text-align: center;
+      max-width: 90vw;
+    }
+
+    #under-construction-modal h2 {
+      margin-bottom: 1rem;
+      color: #1e1b4b;
+    }
+
+    #under-construction-modal p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 
@@ -155,6 +189,15 @@
     <p>Customize your resume for <strong>any</strong> job in <strong>just minutes</strong>. No more endless edits.</p>
     <div class="buttons">
       <button class="btn" id="cta-button">Try It Free</button>
+    </div>
+  </div>
+
+  <!-- Modal Popup for Under Construction -->
+  <div id="under-construction-modal">
+    <div>
+      <h2>🚧 Functions are under construction</h2>
+      <p>We're working hard to bring you this feature soon!</p>
+      <button id="close-modal" class="btn">Close</button>
     </div>
   </div>
 
@@ -221,13 +264,18 @@
 
   <script>
     document.getElementById("cta-button").addEventListener("click", function () {
-      console.log("CTA clicked");
+      // Show under construction modal
+      document.getElementById("under-construction-modal").style.display = "flex";
+      // Google Analytics event
       if (typeof gtag === "function") {
         gtag('event', 'try_it_free_click', {
           'event_category': 'CTA',
           'event_label': 'Main Button'
         });
       }
+    });
+    document.getElementById("close-modal").addEventListener("click", function () {
+      document.getElementById("under-construction-modal").style.display = "none";
     });
   </script>
 </body>
