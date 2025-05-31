@@ -191,14 +191,13 @@
     </div>
   </div>
 
-  <!-- Google Analytics 4 setup (blocked until consent) -->
-  <script type="text/plain" data-cookiecategory="analytics" async
-    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script type="text/plain" data-cookiecategory="analytics">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLQXMSSN12"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-ZLQXMSSN12');
   </script>
 
   <div id="cookie-banner"
@@ -208,29 +207,13 @@
   </div>
 
   <script>
-    function enableAnalyticsScripts() {
-      const scripts = document.querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]');
-      scripts.forEach(script => {
-        const newScript = document.createElement("script");
-        if (script.src) {
-          newScript.src = script.src;
-          newScript.async = true;
-        } else {
-          newScript.innerHTML = script.innerHTML;
-        }
-        document.head.appendChild(newScript);
-      });
-    }
-
     document.getElementById("accept-cookies").addEventListener("click", function () {
       localStorage.setItem("cookie_consent", "true");
       document.getElementById("cookie-banner").style.display = "none";
-      enableAnalyticsScripts();
     });
 
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("cookie_consent") === "true") {
-        enableAnalyticsScripts();
         document.getElementById("cookie-banner").style.display = "none";
       }
     });
